@@ -1,0 +1,135 @@
+body {
+  font-family: 'Karla', sans-serif;
+
+  --background: white;
+  --element-background: #EDFBF8;
+  --main: #86C1BF;
+  --main-dark: #5E798B;
+  --main-remove: #FDB0B3;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  padding-top: 8%;
+}
+
+.main-title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--main);
+  margin-bottom: 2rem;
+}
+
+/* Task Input */
+
+.task-input-section {
+  text-align: center;
+}
+
+.task-form-name-input {
+  font-size: 1.5rem;
+  border-color: var(--main);
+  color: var(--main);
+}
+
+.task-form-name-input:focus {
+  color: var(--main);
+  border-color: var(--main);
+}
+
+.task-form-name-input::placeholder {
+  color: var(--main);
+}
+
+.btn-add-task {
+  background-color: var(--background);
+  color: var(--main);
+  border-color: var(--main);
+  padding: 0 30px;
+}
+
+.btn-add-task:hover {
+  background-color: var(--main);
+  color: var(--background);
+}
+
+/* Task List */
+
+.task-display {
+  padding: 0;
+  position: relative;
+}
+
+.task-list-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--main);
+  padding: 1.5rem 3rem;
+}
+
+.task-list-caption-not-empty {
+  opacity: 0;
+}
+
+.task-list {
+  list-style: none;
+  padding: 1rem 2rem;
+}
+
+.task {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--element-background);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  overflow: hidden;
+  transition: height 1s ease, padding-top 1s ease, padding-bottom 1s ease;
+}
+
+.task-folded {
+  padding: 0 1rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease, padding-top 1s ease, padding-bottom 1s ease;
+}
+
+.task-checked > .task-name {
+  text-decoration: line-through;
+}
+
+.task-name {
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--main-dark);
+  background-color: transparent;
+  border: 0;
+}
+
+.task-name:focus {
+  outline-style: none;
+}
+
+.task-buttons {
+  display: inline-block;
+}
+
+.task-button {
+  color: var(--background);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border-radius: 20px;
+}
+
+.task-check-button {
+  background-color: var(--main);
+}
+
+.task-remove-button {
+  background-color: var(--main-remove);
+}
