@@ -5,7 +5,16 @@ body {
   --element-background: #EDFBF8;
   --main: #86C1BF;
   --main-dark: #5E798B;
-  --main-remove: #FDB0B3;
+  --remove: #FDB0B3;
+}
+
+a {
+  color: var(--main);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-dark);
 }
 
 /* Header */
@@ -131,5 +140,17 @@ header {
 }
 
 .task-remove-button {
-  background-color: var(--main-remove);
+  background-color: var(--remove);
+}
+
+/* Footer */
+
+footer {
+  padding-top: 3rem;
+}
+
+.footer-text {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--main);
 }
