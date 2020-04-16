@@ -52,7 +52,7 @@ const createTask = function(name)
   const task = document.createElement("li");
   addName.call(task, name);
   addButtons.call(task);
-  task.classList.add('task', 'task-folded');
+  task.classList.add('task', 'task-folded', 'row');
   return task;
 }
 
@@ -61,6 +61,7 @@ const addName = function(name)
   const taskName = document.createElement("input");
   taskName.type = "text";
   taskName.value = name;
+  taskName.maxLength = 36;
   taskName.classList.add('task-name');
   this.appendChild(taskName);
 }

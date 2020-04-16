@@ -93,11 +93,12 @@ header {
   margin-bottom: 1rem;
   background-color: var(--element-background);
   border-radius: 30px;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
+  height: 6rem;
   overflow: hidden;
   transition: height 1s ease, padding-top 1s ease, padding-bottom 1s ease;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .task-folded {
@@ -112,11 +113,21 @@ header {
 }
 
 .task-name {
-  display: inline-block;
   font-size: 2rem;
   color: var(--main-dark);
   background-color: transparent;
   border: 0;
+}
+
+@media (max-width: 768px) {
+  .task {
+    height: 10rem;
+    justify-content: center;
+  }
+
+  .task-name {
+    width: 100%;
+  }
 }
 
 .task-name:focus {
@@ -124,10 +135,11 @@ header {
 }
 
 .task-buttons {
-  display: inline-block;
+  dispaly: inline-block;
 }
 
 .task-button {
+  display: inline-block;
   color: var(--background);
   font-size: 1rem;
   padding: 1rem 2rem;
